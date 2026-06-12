@@ -1,4 +1,4 @@
-# Plant Disease Detector 🌿
+# Krishi Madad Agriculture Assistance Platform 🌿
 
 Krishi Madad is a smart agriculture assistance platform designed to help farmers make informed decisions through AI-powered plant disease detection, real-time weather forecasting, agriculture-focused news updates, and voice-enabled multilingual interaction.
 
