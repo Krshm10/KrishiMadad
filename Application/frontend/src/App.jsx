@@ -7,7 +7,7 @@ import {
 } from 'lucide-react';
 
 /* ═══════════════════════════════════════════════════════════
-   SUPPORTED LANGUAGES — 25 languages, fully dynamic
+   SUPPORTED LANGUAGES —  13 languages, fully dynamic
    No hardcoded translations. Uses MyMemory free API.
 ═══════════════════════════════════════════════════════════ */
 const SUPPORTED_LANGUAGES = [
@@ -878,7 +878,7 @@ export default function KisanAI() {
         </div>
         <p style={{color:'#86efac',fontSize:'.82rem',marginBottom:4}}>{t.tagline}</p>
         <p style={{color:'rgba(255,255,255,.4)',fontSize:'.72rem'}}>
-          © 2026 KisanAI · Weather: Open-Meteo · News: Google News RSS · Translation: MyMemory API (free)
+         
         </p>
       </footer>
 
