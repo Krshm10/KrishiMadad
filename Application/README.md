@@ -1,33 +1,19 @@
 # Plant Disease Detector 🌿
 
-A full-stack AI-powered plant disease detection application with a beautiful, multilingual UI.
+Krishi Madad is a smart agriculture assistance platform designed to help farmers make informed decisions through AI-powered plant disease detection, real-time weather forecasting, agriculture-focused news updates, and voice-enabled multilingual interaction.
+
+The platform combines Machine Learning, Web APIs, and modern web technologies to improve accessibility and provide timely agricultural insights
 
 ## Features
 
-- 🤖 **AI-Powered Detection**: Uses your fine-tuned Keras model to detect plant diseases
-- 🎨 **Beautiful UI**: Modern, responsive design inspired by AgriCare
-- 🌍 **Multilingual**: Supports English, Hindi, and Tamil
-- 📱 **Mobile Responsive**: Works seamlessly on all devices
-- 🌤️ **Weather Integration**: Displays weather forecasts for farmers
-- ⚡ **Real-time Results**: Instant disease detection with confidence scores
+- 🤖 **AI-Powered Detection**: Uses your fine-tuned Keras model to detect plant diseases with confidence scores and recommendations
+- 🌍 **Multilingual**: Support users in English, Hindi, Tamil, and 10 other major regional tongues.
+- 🌤️ **Weather Updates**: Localized weather updatesand 7 days forecasts
+- ⚡ **News Alerts**:  Filtered news updates relevant to agriculture and
+government schemes
+- 🗣 **Voice-Enabled Assistant**:Supports voice input and audio responses for improved accessibility
 
-## Project Structure
 
-```
-plant-disease-predictor/
-├── backend/                  # Flask API server
-│   ├── app.py               # Main API application
-│   ├── fine_tuned_model.keras  # Your trained model
-│   └── requirements.txt     # Python dependencies
-├── frontend/                # React application
-│   ├── src/
-│   │   ├── App.jsx         # Main React component
-│   │   ├── main.jsx        # Entry point
-│   │   └── index.css       # Styles
-│   ├── package.json        # Node dependencies
-│   └── index.html          # HTML template
-└── README.md               # This file
-```
 
 ## Prerequisites
 
@@ -82,89 +68,14 @@ The app will open at `http://localhost:3000`
 3. **Upload Image**: Click on the upload area or drag and drop a plant image
 4. **View Results**: Get instant disease detection with recommendations
 5. **Change Language**: Use the language selector to switch between English, Hindi, and Tamil
-
-## API Endpoints
-
-### `GET /health`
-Check if the API is running and model is loaded.
-
-**Response:**
-```json
-{
-  "status": "healthy",
-  "model_loaded": true
-}
-```
-
-### `POST /predict`
-Predict disease from plant image.
-
-**Request Body:**
-```json
-{
-  "image": "data:image/jpeg;base64,..."
-}
-```
-
-**Response:**
-```json
-{
-  "disease": "Potato Late Blight",
-  "confidence": 94.5,
-  "status": "diseased",
-  "recommendations": [
-    "Remove infected leaves immediately",
-    "Apply copper-based fungicide",
-    "Improve air circulation"
-  ]
-}
-```
-
-### `GET /classes`
-Get all supported disease classes.
-
-## Customization
-
-### Adding Disease Classes
-
-Edit `DISEASE_CLASSES` in `backend/app.py`:
-```python
-DISEASE_CLASSES = [
-    'Your Disease 1',
-    'Your Disease 2',
-    # ... add more
-]
-```
-
-### Adding Recommendations
-
-Edit `RECOMMENDATIONS` in `backend/app.py`:
-```python
-RECOMMENDATIONS = {
-    'Your Disease': [
-        'Recommendation 1',
-        'Recommendation 2',
-        # ... add more
-    ]
-}
-```
-
-### Model Input Size
-
-If your model uses a different input size than 224x224, update the resize in `backend/app.py`:
-```python
-image = image.resize((YOUR_SIZE, YOUR_SIZE))
-```
+6. **Weather Updates**: get location based weather updates and weekly forecasts
+7.  **News Alerts**: get in touch with updates relevant to agriculture and
+government schemes
 
 ## Supported Disease Classes
 
 The model currently supports:
-- Apple diseases (Scab, Black Rot, Cedar Rust)
-- Corn diseases (Common Rust, Gray Leaf Spot)
-- Grape diseases (Black Rot, Esca)
-- Potato diseases (Early Blight, Late Blight)
-- Tomato diseases (multiple varieties)
-- Healthy plant detection
+Plant Types: {'Orange', 'Pepper,_bell', 'Tomato', 'Corn_(maize)', 'Squash', 'Soybean', 'Potato', 'Grape', 'Strawberry', 'Cherry_(including_sour)', 'Peach', 'Blueberry', 'Raspberry', 'Apple'}
 
 ## Technologies Used
 
@@ -180,60 +91,9 @@ The model currently supports:
 - Tailwind CSS - Styling
 - Lucide React - Icons
 
-## Troubleshooting
 
-### Backend Issues
 
-**Model not loading:**
-- Ensure `fine_tuned_model.keras` is in the backend directory
-- Check TensorFlow version compatibility
 
-**CORS errors:**
-- Verify Flask-CORS is installed
-- Check the API_URL in frontend matches backend address
 
-### Frontend Issues
 
-**API connection failed:**
-- Ensure backend is running on port 5000
-- Check browser console for errors
-- Verify network settings
 
-**Image upload not working:**
-- Check file size (keep under 10MB)
-- Ensure image format is supported (JPEG, PNG)
-
-## Performance Optimization
-
-1. **Backend**:
-   - Use production WSGI server (gunicorn) instead of Flask dev server
-   - Implement caching for model predictions
-   - Add request rate limiting
-
-2. **Frontend**:
-   - Run `npm run build` for production build
-   - Serve with nginx or similar
-   - Enable compression
-
-## Future Enhancements
-
-- [ ] Add image preprocessing options
-- [ ] Support batch image uploads
-- [ ] Save prediction history
-- [ ] Add data visualization
-- [ ] Implement user accounts
-- [ ] Add offline mode (PWA)
-- [ ] Integrate real weather API
-- [ ] Add crop news feed
-
-## License
-
-This project is open source and available under the MIT License.
-
-## Contributors
-
-Built with ❤️ for farmers and agriculture technology enthusiasts.
-
-## Support
-
-For issues or questions, please open an issue on the repository.
