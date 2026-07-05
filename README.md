@@ -100,3 +100,5 @@ Plant Types: {'Orange', 'Pepper,_bell', 'Tomato', 'Corn_(maize)', 'Squash', 'Soy
 - Vite - Build tool
 - Tailwind CSS - Styling
 - Lucide React - Icons
+
+[🚀Demo video](https://drive.google.com/file/d/1pRTL6I-tKZO8BV9Nw-Kn4Du7lzYS6LNr/view?usp=sharing) 
